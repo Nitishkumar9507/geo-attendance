@@ -4,6 +4,7 @@ import { isAuthenticated, getRole } from "./utils/auth";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import StudentDashboard from "./pages/StudentDashboard";
 import Login from "./pages/Login";
+import Home from "./pages/Home";
 
 const App = () => {
   const ProtectedRoute = ({ children, role }) => {
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<h3>Home</h3>} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
 
         <Route
